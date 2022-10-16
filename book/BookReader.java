@@ -10,8 +10,8 @@ public class BookReader implements IBookReader {
     }
 
     public static void main(String[] args) {
-        Book book = new Book("Tyland", List.of("I", "moved", "here", "recently", "too"));
         BookReader bookReader = new BookReader();
-        bookReader.ScreenPrinter(book);
+        BookPublisher bookPublisher = new BookPublisher();
+        bookReader.ScreenPrinter(bookPublisher.book);
     }
 }

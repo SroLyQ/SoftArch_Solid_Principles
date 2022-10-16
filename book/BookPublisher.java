@@ -6,6 +6,12 @@ import java.util.List;
 
 public class BookPublisher implements IBookPublisher {
 
+    public Book book;
+
+    public BookPublisher() {
+        this.book = new Book("Tyland", List.of("I", "moved", "here", "recently", "too"));
+    }
+
     @Override
     public void FilePrinter(Book book) {
         boolean isEven = false;
@@ -29,8 +35,7 @@ public class BookPublisher implements IBookPublisher {
     }
 
     public static void main(String[] args) {
-        Book book = new Book("Tyland", List.of("I", "moved", "here", "recently", "too"));
         BookPublisher bookPublisher = new BookPublisher();
-        bookPublisher.FilePrinter(book);
+        bookPublisher.FilePrinter(bookPublisher.book);
     }
 }

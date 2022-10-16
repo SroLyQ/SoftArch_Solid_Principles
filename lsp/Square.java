@@ -1,27 +1,22 @@
 
-public class Square extends Rectangle {
+public class Square implements Shape {
+
+    private int side;
 
     Square(int side) {
-        this.setSide(side);
+        this.side = side;
     }
 
-    @Override
-    public void setWidth(int width) {
-        this.setSide(width);
-    }
-
-    @Override
-    public void setHeight(int height) {
-        this.setSide(height);
+    public int getSide() {
+        return this.side;
     }
 
     public void setSide(int side) {
-        super.setWidth(side);
-        super.setHeight(side);
+        this.side = side;
     }
 
     @Override
     public int getArea() {
-        return this.getHeight() * this.getHeight();
+        return this.side * this.side;
     }
 }
